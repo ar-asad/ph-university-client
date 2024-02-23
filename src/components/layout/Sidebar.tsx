@@ -57,8 +57,8 @@ const Sidebar = () => {
         theme="dark"
         mode="inline"
         defaultSelectedKeys={["4"]}
-        // items={sidebarItemsGenerator(adminPaths, userRole.ADMIN)}
-        items={sidebarItems}
+        items={sidebarItemsGenerator(adminPaths, userRole.ADMIN)}
+        // items={sidebarItems}
       />
     </Sider>
   );
