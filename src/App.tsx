@@ -1,8 +1,11 @@
+import MainLayout from "./components/layout/MainLayout";
+import ProtectedRoute from "./components/layout/ProtectedRoute";
+
 function App() {
   return (
-    <>
-      <h1>Ph University management syestem</h1>
-    </>
+    <ProtectedRoute>
+      <MainLayout />
+    </ProtectedRoute>
   );
 }
 
