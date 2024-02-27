@@ -16,7 +16,7 @@ const AcademicSemister = () => {
     isLoading,
     isFetching,
   } = useGetAllSemisterQuery(params);
-  console.log(params);
+
   const tableData = semesterData?.data?.map(
     ({ _id, name, startMonth, endMonth, year }) => ({
       key: _id,
