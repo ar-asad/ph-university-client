@@ -1,12 +1,20 @@
-import CreateAdmin from "../pages/admin/CreateAdmin";
-import CreateFaculty from "../pages/admin/CreateFaculty";
-import CreateStudent from "../pages/admin/CreateStudent";
+import CreateAdmin from "../pages/admin/userManagement/CreateAdmin";
+import CreateFaculty from "../pages/admin/userManagement/CreateFaculty";
+import CreateStudent from "../pages/admin/userManagement/CreateStudent";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import CreateAcademicSemister from "../pages/admin/academicManagement/CreateAcademicSemister";
 import AcademicSemister from "../pages/admin/academicManagement/AcademicSemister";
 import CreateAcademicFaculty from "../pages/admin/academicManagement/CreateAcademicFaculty";
 import AcademicFaculty from "../pages/admin/academicManagement/AcademicFaculty";
 import CreateAcademicDepartment from "../pages/admin/academicManagement/CreateAcademicDepartment";
+import StudentData from "../pages/admin/userManagement/StudentData";
+import StudentDetails from "../pages/admin/userManagement/StudentDetails";
+import SemesterRegistration from "../pages/admin/courseMangement/SemesterRegistration";
+import RegisteredSemesters from "../pages/admin/courseMangement/RegisteredSemesters";
+import CreateCourses from "../pages/admin/courseMangement/CreateCourses";
+import Courses from "../pages/admin/courseMangement/Courses";
+import OfferCourse from "../pages/admin/courseMangement/OfferCourse";
+import OfferedCourses from "../pages/admin/courseMangement/OfferedCourses";
 
 export const adminPaths = [
   {
@@ -53,6 +61,20 @@ export const adminPaths = [
     name: "User Management",
     children: [
       {
+        name: "Create Student",
+        path: "create-student",
+        element: <CreateStudent />,
+      },
+      {
+        path: "student-data/:studentId",
+        element: <StudentDetails />,
+      },
+      {
+        name: "Students",
+        path: "student-data",
+        element: <StudentData />,
+      },
+      {
         name: "Create Admin",
         path: "create-admin",
         element: <CreateAdmin />,
@@ -62,10 +84,40 @@ export const adminPaths = [
         path: "create-faculty",
         element: <CreateFaculty />,
       },
+    ],
+  },
+  {
+    name: "Course Management",
+    children: [
       {
-        name: "Create Student",
-        path: "create-student",
-        element: <CreateStudent />,
+        name: "Semester Registration",
+        path: "semester-registration",
+        element: <SemesterRegistration />,
+      },
+      {
+        name: "Registered Semesters",
+        path: "registered-semesters",
+        element: <RegisteredSemesters />,
+      },
+      {
+        name: "Create Course",
+        path: "create-course",
+        element: <CreateCourses />,
+      },
+      {
+        name: "Courses",
+        path: "courses",
+        element: <Courses />,
+      },
+      {
+        name: "Offer Course",
+        path: "offer-course",
+        element: <OfferCourse />,
+      },
+      {
+        name: "Offered Courses",
+        path: "offered-courses",
+        element: <OfferedCourses />,
       },
     ],
   },
